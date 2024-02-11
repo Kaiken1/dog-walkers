@@ -48,7 +48,7 @@
 				<span>HUNTER&nbsp;AND&nbsp;JEFFREY'S</span>
 				<h1>DOG&nbsp;WALKING&nbsp;BUSINESS</h1>
 			</div>
-			<div class="main-msg center-text">
+			<div class="main-msg center-text" style="margin: 2em">
 				<p class="text-font">
 					No time to walk your dog?<br />Let us do it for you!
 				</p>
@@ -63,18 +63,71 @@
 			>
 				<div class="case center-text">
 					<div class="title-bar">Contact Us!</div>
-					<div class="content text-font">
+					<div class="content text-font flex-center">
 						Call 306-450-0077<br />or<br />Email us at [email]
 					</div>
 				</div>
 				<div class="case center-text">
 					<div class="title-bar">Prices</div>
-					<div class="content text-font">
+					<div class="content text-font flex-center">
 						$10/30 minutes<br />$15/per hour
 					</div>
 				</div>
 				<div class="case center-text" style="grid-column: span 2">
 					<div class="title-bar">Hire us!</div>
+				</div>
+			</div>
+			<div
+				class="cases-container"
+				style="
+					grid-template-columns: 1fr 1fr;
+					grid-template-rows: 1fr 1fr;
+				"
+			>
+				<div class="case" style="grid-row: span 2">
+					<div class="title-bar center-text">Schedule</div>
+					<div class="content">
+						<ul class="weekdays-list">
+							<li class="weekday-item">
+								<span class="day">SUN</span
+								><span class="time">2:00PM-6:30PM</span>
+							</li>
+							<li class="weekday-item">
+								<span class="day">MON</span
+								><span class="time">4:30PM-6:30PM</span>
+							</li>
+							<li class="weekday-item">
+								<span class="day">TUE</span
+								><span class="time">4:30PM-6:30PM</span>
+							</li>
+							<li class="weekday-item">
+								<span class="day">WED</span
+								><span class="time">4:30PM-6:30PM</span>
+							</li>
+							<li class="weekday-item">
+								<span class="day">THU</span
+								><span class="time">4:30PM-6:30PM</span>
+							</li>
+							<li class="weekday-item">
+								<span class="day">FRI</span
+								><span class="time">4:30PM-6:30PM</span>
+							</li>
+							<li class="weekday-item">
+								<span class="day">SAT</span
+								><span class="time">2:00PM-6:30PM</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- <div class="case center-text">
+					<div class="title-bar">BOX 1</div>
+					<div class="content text-font"></div>
+				</div> -->
+				<div class="case center-text" style="grid-row: span 2">
+					<div class="title-bar">Fun Fact!</div>
+					<div class="content flex-center" id="fact-container">
+						<span id="fact-text" class="text-font"></span>
+					</div>
 				</div>
 			</div>
 		</main>
@@ -88,6 +141,59 @@
 					transform: translate(-50%, -80%);
 				"
 			/>
+			<img
+				src="./images/footer_images.png"
+				style="
+					width: 100vw;
+					max-width: 800px;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translate(-50%, 0);
+				"
+			/>
 		</footer>
+		<script>
+			const FactContainer = document.getElementById("fact-text");
+			async function getFacts() {
+				let promise = new Promise(function (resolve) {
+					fetch("https://dog-api.kinduff.com/api/facts?number=5")
+						.then((res) => {
+							return res.json();
+						})
+						.then((data) => {
+							resolve(data);
+						})
+						.catch((err) => {
+							console.log(err);
+						});
+				});
+				await promise.then((res) => {
+					let factCounter = 0;
+					FactContainer.innerText = res.facts[factCounter % 4];
+					FactContainer.classList.remove("hideText");
+					FactContainer.classList.add("showText");
+					let carousel = setInterval(() => {
+						FactContainer.classList.remove("showText");
+						FactContainer.classList.add("hideText");
+						setTimeout(() => {
+							factCounter += 1;
+							FactContainer.innerText =
+								res.facts[factCounter % 4];
+							FactContainer.classList.remove("hideText");
+							FactContainer.classList.add("showText");
+						}, 450);
+					}, 6500);
+				});
+				// console.log(await promise[1], await promise.then(res));
+			}
+			// function findReadEstimate(text) {
+			// 	// let min = String(text.split(" ").length / 200).split(".")[0]
+			// 	let sec = String(text.split(" ").length / 200).split(".")[1]
+			// 	// console.log(min, sec*100)
+			// 	return sec*300
+			// }
+			getFacts();
+		</script>
 	</body>
 </html>
