@@ -1,9 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="./style.css"/>
-  </head>
-  <body>
-    <h1>Hi Hunter! This is Jeffrey</h1>
-  </body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homepage</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="wave-container">
+				<!-- <img src="./svg/waves/wave2.svg" style="top: -180px" class="wave" /> -->
+				<!-- <img src="./svg/waves/wave1.svg" style="top: -130px" class="wave" /> -->
+				<img src="./svg/waves/wave2.svg" class="wave" />
+				<img src="./svg/waves/wave1.svg" class="wave" />
+			</div>
+			<div class="cloud-container">
+				<img
+					src="./svg/clouds/cloud1.svg"
+					style="
+						top: calc(var(--cloud-y) + 10em);
+						transform: translateX(-20%);
+					"
+					class="cloud"
+				/>
+				<img
+					src="./svg/clouds/cloud2.svg"
+					style="
+						top: var(--cloud-y);
+						left: 100%;
+						transform: translateX(-60%);
+					"
+					class="cloud"
+				/>
+				<img
+					src="./svg/clouds/cloud3.svg"
+					style="
+						top: calc(var(--cloud-y) + 30em);
+						left: 50%;
+						transform: translateX(-50%);
+					"
+					class="cloud"
+				/>
+			</div>
+		</header>
+		<main>
+			<div class="header-container">
+				<span>HUNTER&nbsp;AND&nbsp;JEFFREY'S</span>
+				<h1>DOG&nbsp;WALKING&nbsp;BUSINESS</h1>
+			</div>
+			<div class="main-msg center-text">
+				<p class="text-font">
+					No time to walk your dog?<br />Let us do it for you!
+				</p>
+				<p class="text-font">See schedule below and give us a call!</p>
+			</div>
+			<div
+				class="cases-container"
+				style="
+					grid-template-columns: 1fr 1fr;
+					grid-template-rows: 1fr 1fr;
+				"
+			>
+				<div class="case center-text">
+					<div class="title-bar">Contact Us!</div>
+					<div class="content text-font">
+						Call 306-450-0077<br />or<br />Email us at [email]
+					</div>
+				</div>
+				<div class="case center-text">
+					<div class="title-bar">Prices</div>
+					<div class="content text-font">
+						$10/30 minutes<br />$15/per hour
+					</div>
+				</div>
+				<div class="case center-text" style="grid-column: span 2">
+					<div class="title-bar">Hire us!</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<img
+				src="./images/dogs.png"
+				style="
+					width: 14em;
+					position: relative;
+					left: 50%;
+					transform: translate(-50%, -80%);
+				"
+			/>
+		</footer>
+	</body>
 </html>

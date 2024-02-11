@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&family=Lilita+One&display=swap");
+
+* {
+    padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Lilita One", sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+body {
+	background-color: #88e3ff;
+	overflow-x: hidden;
+}
+
+.wave {
+	width: 100vw;
+	position: absolute;
+	opacity: 0.5;
+	transform: translateY(-30%);
+}
+
+:root {
+	--cloud-y: calc(100vh / 2);
+}
+.cloud {
+	width: 15em;
+	position: absolute;
+	opacity: 0.5;
+}
+
+main {
+	width: 100vw;
+	min-height: 100vh;
+	position: relative;
+	top: 15em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10em;
+}
+
+.header-container {
+	width: fit-content;
+	font-size: 2em;
+	line-height: 1.2em;
+	color: white;
+}
+
+.cases-container {
+    display: grid;
+    gap: 1em;
+    width: 80%;
+    height: 30em;
+}
+.case {
+    font-size: 1.4em;
+    height: 100%;
+    position: relative;
+}
+.case .title-bar {
+    background-color: #c7faff;
+    color: #48d4ff;
+    border-radius: 2em;
+    padding: .5em;
+    /* transform: translateY(100%); */
+    position: absolute;
+    width: 100%;
+}
+.case .content {
+    color: #0190bc;
+    border-radius: 1em;
+    font-size: 1em;
+    padding: 3em 0 1em 0;
+    height: 100%;
+    display: flex;
+    background-color: #ffffff80;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-font {
+	font-family: "Harmattan", sans-serif;
+	font-size: 1.8em;
+	line-height: 1em;
+    color: white;
+}
+.center-text {
+	text-align: center;
+}
+
+.title-bar {
+    text-transform: uppercase;
+}
+
+footer {
+	width: 100%;
+	height: 15em;
+	background-color: #6affb3;
+	position: sticky;
+	bottom: 0;
+	transform: translate(0, 80%);
+	/* left: 0; */
+}
