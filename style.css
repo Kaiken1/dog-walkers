@@ -186,4 +186,7 @@ footer {
 .warning {
 	display: flex;
 	padding: 0.5em;
+	border: 50px;
+	background-color: #FFFCB6;
+	overflow: hidden;
 }
