@@ -190,3 +190,8 @@ footer {
 	background-color: #FFFCB6;
 	overflow: hidden; 
 }
+.warning-pin {
+	padding: 0.5em;
+	border-radius: 50px;
+	background-color: #FFE15F;
+}
