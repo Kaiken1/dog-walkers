@@ -185,4 +185,5 @@ footer {
 
 .warning {
 	display: flex;
+	padding: 0.5em;
 }
