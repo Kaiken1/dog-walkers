@@ -188,7 +188,8 @@ footer {
 	padding: 0.5em;
 	border: 50px;
 	background-color: #FFFCB6;
-	overflow: hidden; 
+	overflow: hidden;
+	justify-content: left;
 }
 .warning-pin {
 	padding: 0.5em;
