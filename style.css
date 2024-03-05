@@ -185,7 +185,6 @@ footer {
 
 .warning {
 	display: flex;
-	padding: 0.5em;
 	border: 50px;
 	background-color: #FFFCB6;
 	overflow: hidden;
@@ -195,4 +194,7 @@ footer {
 	padding: 0.5em;
 	border-radius: 50px;
 	background-color: #FFE15F;
+}
+.warning-msg {
+	padding: 0.5em;
 }
