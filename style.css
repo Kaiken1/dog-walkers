@@ -203,4 +203,5 @@ footer {
 }
 .warning-msg {
 	padding: 1em;
+	font-family: inherit;
 }
