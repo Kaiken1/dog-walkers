@@ -195,15 +195,18 @@ footer {
 	font-family: 'inter', sans-serif !important;
 }
 .warning-pin {
-	padding: 1em;
+	padding: 10px;
 	border-radius: 50px;
 	background-color: #FFE15F;
 	width: 3em;
 	height: 3em;
 	text-align: center;
 	font-family: 'Madimi One', sans-serif;
+	font-size: 2em;
 }
 .warning-msg {
 	padding: 1em;
 	font-family: inherit;
+	display: flex;
+	align-items: center;
 }
