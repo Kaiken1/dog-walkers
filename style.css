@@ -194,6 +194,8 @@ footer {
 	padding: 1em;
 	border-radius: 50px;
 	background-color: #FFE15F;
+	width: 3em;
+	height: 3em;
 }
 .warning-msg {
 	padding: 1em;
