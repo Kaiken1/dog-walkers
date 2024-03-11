@@ -17,9 +17,11 @@
 	.header-container {
 		font-size: 1em;
 	}
+
 	* {
 		font-size: 0.95em !important;
 	}
+
 	.text-font {
 		font-size: 0.5em;
 	}
@@ -29,15 +31,18 @@ body {
 	background-color: #88e3ff;
 	overflow-x: hidden;
 }
+
 .text-font {
 	font-family: "Harmattan", sans-serif;
 	font-size: 1.8em;
 	line-height: 1em;
 	color: white;
 }
+
 .center-text {
 	text-align: center;
 }
+
 .flex-center {
 	display: flex;
 	align-items: center;
@@ -55,6 +60,7 @@ body {
 	--cloud-y: calc(100vh / 2);
 	--fadeTime: 500ms;
 }
+
 .cloud {
 	width: 15em;
 	position: absolute;
@@ -80,9 +86,11 @@ main {
 	line-height: 1.2em;
 	color: white;
 }
+
 .header-container span {
 	font-size: 0.8em;
 }
+
 .header-container h1 {
 	font-size: 1.2em;
 }
@@ -93,11 +101,13 @@ main {
 	width: 80%;
 	height: 30em;
 }
+
 .case {
 	font-size: 1.4em;
 	height: 100%;
 	position: relative;
 }
+
 .case .title-bar {
 	background-color: #c7faff;
 	color: #48d4ff;
@@ -106,6 +116,7 @@ main {
 	position: absolute;
 	width: 100%;
 }
+
 .case .content {
 	color: #0190bc;
 	border-radius: 1em;
@@ -119,6 +130,7 @@ main {
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 }
+
 #fact-text {
 	font-size: inherit;
 	color: inherit;
@@ -127,10 +139,12 @@ main {
 	-moz-user-select: text;
 	-ms-user-select: text;
 }
+
 .hideText {
 	animation: fadeText var(--fadeTime) ease 0s 1;
 	visibility: hidden;
 }
+
 .showText {
 	animation: showText var(--fadeTime) ease 0s 1;
 }
@@ -139,14 +153,17 @@ main {
 	0% {
 		color: inherit;
 	}
+
 	100% {
 		color: #ffffff00;
 	}
 }
+
 @keyframes showText {
 	0% {
 		color: #ffffff00;
 	}
+
 	100% {
 		color: inherit;
 	}
@@ -161,14 +178,17 @@ main {
 	height: 100%;
 	justify-content: space-between;
 }
+
 .weekdays-list .weekday-item {
 	font-family: inherit;
 	padding: 0 2em;
 }
+
 .weekday-item .day,
 .weekday-item .time {
 	font-family: inherit;
 }
+
 .weekday-item .time {
 	float: right;
 }
@@ -197,6 +217,7 @@ footer {
 	color: #FF4848;
 	font-family: 'inter', sans-serif !important;
 }
+
 .warning-pin {
 	padding: 10px;
 	border-radius: 50px;
@@ -207,6 +228,7 @@ footer {
 	font-family: 'Madimi One', sans-serif;
 	font-size: 2em;
 }
+
 .warning-msg {
 	padding: 1em;
 	font-family: inherit;
